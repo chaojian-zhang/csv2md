@@ -28,7 +28,7 @@ namespace csv2md
                 HeaderMode = Csv.HeaderMode.HeaderAbsent
             }))
             {
-                md.AppendLine("| " + string.Join(" | ", line) + " |");
+                md.AppendLine("| " + string.Join(" | ", line.Values) + " |");
             }
             File.WriteAllText(output, md.ToString());
         }
